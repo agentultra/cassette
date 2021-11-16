@@ -1,0 +1,41 @@
+cabal-version:      2.4
+name:               http-replay
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+synopsis: Record and replay http client actions for testing
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+license:            BSD-3-Clause
+author:             James King
+maintainer:         james@agentultra.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  HttpReplay
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.16.0.0
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+test-suite http-replay-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   tests
+    main-is:          MyLibTest.hs
+    build-depends:    base ^>=4.16.0.0
